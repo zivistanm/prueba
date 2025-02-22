@@ -1,1 +1,46 @@
-<h1>GitHub page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Datos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Datos Agregados</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+            <th>lala</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['Nombre'] }}</td>
+            <td>{{ row['Edad'] }}</td>
+            <td>{{ row['Ciudad'] }}</td>
+            <td>{{ row['lala'] }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
