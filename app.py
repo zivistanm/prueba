@@ -23,9 +23,10 @@ def add():
     nombre = request.form['nombre']
     edad = request.form['edad']
     ciudad = request.form['ciudad']
+    lala = request.form['lala']
     
     # Agrega los datos a la hoja
-    sheet.append_row([nombre, edad, ciudad])
+    sheet.append_row([nombre, edad, ciudad, lala])
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
